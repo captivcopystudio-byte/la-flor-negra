@@ -174,75 +174,51 @@ const featuredProducts = [
       </nav>
 
       {/* Hero Section */}
-      <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black"
-          style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=1200)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            transform: `translateY(${scrollY * 0.5}px)`,
-          }}
-        />
-        
-        <div className="absolute inset-0 bg-black/60" />
-        
-        {/* Floating Elements */}
-        <div className="absolute inset-0">
-          {[...Array(8)].map((_, i) => (
-            <div
-              key={i}
-              className={`absolute w-1 h-1 bg-rose-400/40 rounded-full animate-float ${
-                isLoaded ? 'opacity-100' : 'opacity-0'
-              }`}
-              style={{
-                left: `${15 + i * 12}%`,
-                top: `${25 + i * 8}%`,
-                animationDelay: `${i * 0.7}s`,
-                animationDuration: `${4 + i * 0.3}s`
-              }}
-            />
-          ))}
-        </div>
+      <section className="relative h-screen bg-black text-white overflow-hidden" id="hero">
+  <img
+    src="https://images.unsplash.com/photo-1602810318365-b4eaf9a9c0a3"
+    alt="Fashion Background"
+    className="absolute inset-0 w-full h-full object-cover opacity-30"
+  />
+  <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
+  <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+    <h1 className={`text-5xl md:text-7xl font-bold mb-6 transition-all duration-1000 transform ${
+      isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
+    }`}>
+      La flor Negra
+    </h1>
+    <p className={`text-xl md:text-2xl mb-8 max-w-2xl transition-all duration-1000 transform ${
+      isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+    }`} style={{ transitionDelay: '400ms' }}>
+      Elevate your style with our bold and elegant black-themed fashion.
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <button 
+        onClick={() => {
+          document.getElementById('colecciones')?.scrollIntoView({ behavior: 'smooth' });
+        }} 
+        className={`bg-rose-500 hover:bg-rose-600 text-white px-8 py-4 rounded-full font-semibold text-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl ${
+          isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+        style={{ transitionDelay: '700ms' }}
+      >
+        Ver Colección
+      </button>
+      <button 
+        onClick={() => {
+          document.getElementById('productos')?.scrollIntoView({ behavior: 'smooth' });
+        }} 
+        className={`border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-semibold text-lg transform hover:scale-105 transition-all duration-300 ${
+          isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+        style={{ transitionDelay: '800ms' }}
+      >
+        Catálogo
+      </button>
+    </div>
+  </div>
+</section>
 
-        <div className="relative z-10 text-center px-4 max-w-5xl">
-          <h1 className={`text-6xl md:text-8xl font-serif font-bold mb-6 text-white transition-all duration-1000 ${
-            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
-            La Flor Negra
-          </h1>
-          <p className={`text-xl md:text-2xl text-rose-200 mb-8 transition-all duration-1000 delay-300 ${
-            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
-            Moda Femenina • Elegancia • Estilo Único
-          </p>
-          <p className={`text-lg text-gray-300 mb-12 max-w-2xl mx-auto transition-all duration-1000 delay-500 ${
-            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
-            Descubre nuestra exclusiva colección de prendas diseñadas para la mujer moderna que busca sofisticación y comodidad en cada ocasión.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={() => alert('Button clicked!')} className={`bg-rose-500 hover:bg-rose-600 text-white px-8 py-4 rounded-full font-semibold text-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-            style={{ transitionDelay: '700ms' }}>
-              Ver Colección
-            </button>
-            <button onClick={() => alert('Button clicked!')} className={`border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-semibold text-lg transform hover:scale-105 transition-all duration-300 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-            style={{ transitionDelay: '800ms' }}>
-              Catálogo
-            </button>
-          </div>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-rose-400 rounded-full p-1">
-            <div className="w-1 h-3 bg-rose-400 rounded-full animate-pulse"></div>
-          </div>
-        </div>
-      </section>
 
       {/* Collections Section */}
       <section id="colecciones" className="py-20 bg-gray-50">
