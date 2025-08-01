@@ -37,7 +37,7 @@ function App() {
   }, []);
 
 const featuredProducts = [
-  { id: 1, name: 'Vestido Negro Elegante', price: '$70', image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg' },
+  { id: 1, name: 'Vestido Negro Elegante', price: '$70', image: }'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg' },
   { id: 2, name: 'Blusa Floral Negra', price: '$40', originalPrice: null, image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400', category: 'Blusas', isNew: false },
   { id: 3, name: 'Falda Midi Negra', price: '$90', originalPrice: '$2,100', image: 'https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=400', category: 'Faldas', isNew: false },
   { id: 4, name: 'Chaqueta Negra Premium', price: '$100', originalPrice: null, image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400', category: 'Chaquetas', isNew: true },
