@@ -36,15 +36,14 @@ function App() {
     };
   }, []);
 
-  const featuredProducts = [
-   { id: 1, name: 'Vestido Negro Elegante', price: '$70', image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg' }, 'Vestido Negro Elegante
-    { id: 2, name: 'Blusa Floral Negra', price: '$40', originalPrice: null, image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400', category: 'Blusas', isNew: false },
-    { id: 3, name: 'Falda Midi Negra', price: '$90', originalPrice: '$2,100', image: 'https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=400', category: 'Faldas', isNew: false },
-    { id: 4, name: 'Chaqueta Negra Premium', price: '$100', originalPrice: null, image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400', category: 'Chaquetas', isNew: true },
-    { id: 5, name: 'Pantalón Negro Elegante', price: '$200', originalPrice: '$2,500', image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=400', category: 'Pantalones', isNew: false },
-    { id: 6, name: 'Conjunto Negro Completo', price: '$400', originalPrice: null, image: 'https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=400', category: 'Conjuntos', isNew: true }
-  ];
-
+const featuredProducts = [
+  { id: 1, name: 'Vestido Negro Elegante', price: '$70', image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg' },
+  { id: 2, name: 'Blusa Floral Negra', price: '$40', originalPrice: null, image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400', category: 'Blusas', isNew: false },
+  { id: 3, name: 'Falda Midi Negra', price: '$90', originalPrice: '$2,100', image: 'https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=400', category: 'Faldas', isNew: false },
+  { id: 4, name: 'Chaqueta Negra Premium', price: '$100', originalPrice: null, image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400', category: 'Chaquetas', isNew: true },
+  { id: 5, name: 'Pantalón Negro Elegante', price: '$200', originalPrice: '$2,500', image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=400', category: 'Pantalones', isNew: false },
+  { id: 6, name: 'Conjunto Negro Completo', price: '$400', originalPrice: null, image: 'https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=400', category: 'Conjuntos', isNew: true }
+];
   const collections = [
     { name: 'Colección Noche', description: 'Elegancia para ocasiones especiales', image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=600' },
     { name: 'Casual Chic', description: 'Comodidad con estilo para el día a día', image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=600' },
